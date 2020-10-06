@@ -83,7 +83,7 @@ Put an exclamation symbol (\!), enclose the description text of the image betwee
 ___
 
 
-## Testing
+## Markdown Testing
 ---
 The segment where tests of what has been learned are carried out.
 =
@@ -383,9 +383,56 @@ Github supports the use of emojis. Check:
 ### Username @Mentions:
 Type \@ followed by the Username to notify this person to come and view the comment. It also applies to teams in organizations.
 
-@jeancahu :3 \<3
 <!--end Github Username @Mentions-->
 
+.
+
+<!--begin Github Issue References-->
+### Issue References:
+Any number that refers to an Issue or
+Pull Request will be automatically
+converted into a link.
+
+#2 = (link to this project's pull request \#2) 
+
+<!--end Github Issue References-->
+
+.
+
+---
+___
+
+
+## Github Basics
+---
+
+Part where I'm learning the github basics.
+=
+<!--begin Github Issue-->
+### Issue:
+When a third person uses your code and detects an error/bug/problem/something to improve, they report it by making an issue.
+
+So you can check it out and solve/improve it :bowtie:.
+
+<!--end Github Issue-->
+.
+<!--begin Github Fork-->
+### Fork:
+It's a copy of a repository that not affects the original project.
+
+<!--end Github Fork-->
+.
+<!--begin Github Pull request-->
+### Pull request:
+A proposal to incorporate changes into someone's else project.
+
+It can be reviewed, accepted or commented.
+<!--end Github Pull request-->
+.
+<!--begin Github Blame-->
+### Blame Option:
+Show changes and who made what.
+<!--end Github Blame-->
 .
 
 ---
