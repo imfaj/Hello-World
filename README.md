@@ -393,7 +393,9 @@ Any number that refers to an Issue or
 Pull Request will be automatically
 converted into a link.
 
-#2 = (link to this project's pull request \#2) 
+#2 
+
+= (link to this project's pull request \#2) 
 
 <!--end Github Issue References-->
 
