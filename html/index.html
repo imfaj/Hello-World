@@ -10,7 +10,41 @@
         <!-- <link rel="stylesheet" href="/html/css/style.css" /
         <!--</script>-->
         <style>
-            a {color:blueviolet;}
+            a:link {
+                color:blueviolet;
+                background-color: #0000;
+                border: 1px white;
+                text-align: center;
+                padding: 15px 25px;
+                display: inline-block;
+            }
+            a:visited {
+                color: pink;
+                background-color: #0000;
+                border: 1px white;
+                text-align: center;
+                padding: 15px 25px;
+                display: inline-block;
+                text-decoration: none;
+            }
+            a:hover {
+                color: red;
+                background-color: #0000;
+                border: 1px white;
+                text-align: center;
+                padding: 15px 25px;
+                display: inline-block;
+                text-decoration: underline;
+            }
+            a:active {
+                color: yellow;
+                background-color: #0000;
+                border: 1px white;
+                padding: 15px 25px;
+                text-align: center;
+                display: inline-block;
+                text-decoration: underline;
+            }
         </style>
 
     </head>
@@ -126,10 +160,8 @@
             <h1>Bi-Directional Override: <bdo dir="rtl"> This text is al reves.</bdo></h1>
             <br>
             <h1>Button as a link</h1>
-            <button onclick="window.open(imfaj.tumblr.com);">Click it!</button> <!--Javascript-->
-
-
-
+            <button onclick="imfaj.tumblr.com">Click it!</button> <!--Javascript-->
+            <br>
 
     </body>
 </html>
