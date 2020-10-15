@@ -45,6 +45,23 @@
                 display: inline-block;
                 text-decoration: underline;
             }
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                }
+            .button1 {
+                background-color: white;
+                color: black;
+                border: 2px solid #555555;
+                }
         </style>
         <script>
             function clickCounter() {
@@ -176,7 +193,7 @@
             <h1>Bi-Directional Override: <bdo dir="rtl"> This text is al reves.</bdo></h1>
             <br>
             <h1>Button as a link</h1>
-            <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+            <p><button class="button button1" onclick="clickCounter()" type="button">Click me!</button></p>
             <div id="result"></div>
             <p>Click the button to see the counter increase.</p>
             <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
