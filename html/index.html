@@ -46,7 +46,20 @@
                 text-decoration: underline;
             }
         </style>
-
+        <script>
+            function clickCounter() {
+              if (typeof(Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                  localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else {
+                  localStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+              } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+              }
+            }
+            </script>
     </head>
     <!--Only the content inside the <body> section will be displayed in a browser.-->
     <body style="background-color:#fcf0fb;text-align:center;font-family:cursive;"> <!--element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.-->
@@ -86,7 +99,7 @@
             <Br>
             <h1>Web Images</h1>
             <p>This is a web image.</p>
-            <img src="https://64.media.tumblr.com/82f082a15f99b1adf9f32b9cea88a21d/tumblr_multv3ghtm1rw662jo1_r2_500.gifv" alt="B&W Sakura width="208" height="416"> <!--width and height in pixels-->
+            <img src="https://64.media.tumblr.com/82f082a15f99b1adf9f32b9cea88a21d/tumblr_multv3ghtm1rw662jo1_r2_500.gif" alt="B&W Sakura width="208" height="416"> <!--width and height in pixels-->
             <br>
             <p>This is a <br> sentence with a line break.</p>
             <br>
@@ -163,12 +176,14 @@
             <h1>Bi-Directional Override: <bdo dir="rtl"> This text is al reves.</bdo></h1>
             <br>
             <h1>Button as a link</h1>
-            <button onclick="windows.location.href='imfaj.tumblr.com'">Click it!</button> <!--Javascript-->
+            <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+            <div id="result"></div>
+            <p>Click the button to see the counter increase.</p>
+            <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
             <br>
             <p><a href="#Title">Back to top! :3</a></p>
             <br>
             <h1 id="End">Ir a index2.html</h1>
-            <p><a href="index2.html" target="_blank">INDEX2.HTML</a></p>
-
+            <p><a href="index2.html">INDEX2.HTML</a></p>
     </body>
 </html>
