@@ -12,6 +12,18 @@
                     document.getElementById('sakura').style.display='none';
                   }
                   }
+                  function hidepicture() {
+                    var x = document.getElementsByClassName("images");
+                    for (var i = 0; i < x.length; i++) {
+                     x[i].style.display = "none";
+                     }
+                  }
+                  function showpicture() {
+                    var x = document.getElementsByClassName("images");
+                    for (var i = 0; i < x.length; i++) {
+                     x[i].style.display = "block";
+                     }
+                  }
                   function youclicked(){
                     alert("You clicked the blush!")
                   }
@@ -33,6 +45,7 @@
         <buttom class="button button2" onclick="picture()">Show Pic</buttom>
         <br>
         <h1>Look this Image map</h1>
+        <p>Click the blush, the lipstick and the eye shadow palette.</p>
         <img src="https://www.worldvision.ca/WorldVisionCanada/media/stories/makeup-mica-ethical.jpg?ext=.jpg" alt="Makeup" usemap="#makeupmap">
         <map name="makeupmap">
           <area shape="circle" coords="449,63,94" alt="Blush" onclick="youclicked()"> <!---href="Blush.htm"--->
@@ -40,4 +53,5 @@
           <area shape="poly" coords="413,295,353,239,293,189,280,191,280,201,285,217,292,227,299,237,306,247,324,268,336,281,352,299,371,320,372,321,371,320,379,321,385,321,394,309" alt="Lipstick" href="Lipstick.htm">
           </map>
           <br>
+          <button onclick="hidepicture()">Hide Pictures</button><button onclick="showpicture()">Show Pictures</button>
       </body>
