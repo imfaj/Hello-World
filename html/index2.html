@@ -27,6 +27,12 @@
                   function youclicked(){
                     alert("You clicked the blush!")
                   }
+                  function VamosAComer() {
+                    document.getElementById("myHeader").innerHTML = "Me too! Let's eat.";
+                  }
+                  function PuesyoSiVamosAComer() {
+                    document.getElementById("myHeader").innerHTML = "Aw :c. I'm hungry. Let's talk and eat somewhere!";
+                  }
           </script>
     </head>
     <header id="header">
@@ -54,4 +60,7 @@
           </map>
           <br>
           <button onclick="hidepicture()">Hide Pictures</button><button onclick="showpicture()">Show Pictures</button>
+          <br>
+          <h1 id="myHeader">Are you hungry?</h1>
+          <button onclick="VamosAComer()">Si!</button><button onclick="PuesyoSiVamosAComer()">No!</button>
       </body>
