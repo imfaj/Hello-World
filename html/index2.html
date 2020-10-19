@@ -5,12 +5,14 @@
         <title style="font-family:cursive;">MariFer's page</title>
         <script>
                 function picture(){ 
-                  var pic = "https://64.media.tumblr.com/82f082a15f99b1adf9f32b9cea88a21d/tumblr_multv3ghtm1rw662jo1_r2_500.gif"
-                  if(document.getElementById('sakura').style.display='none'){
-                    document.getElementById('sakura').style.display='block';
+                  var pic = "https://64.media.tumblr.com/82f082a15f99b1adf9f32b9cea88a21d/tumblr_multv3ghtm1rw662jo1_r2_500.gif";
+                  var displayStyle = document.getElementById("sakura").style.display;
+                  if(displayStyle = "none"){
+                    displayStyle = "block";
                   } else{
-                    document.getElementById('sakura').style.display='none';
+                    displayStyle = "none";
                   }
+                  document.getElementById("sakura").style.display = displayStyle;
                   }
                   function hidepicture() {
                     var x = document.getElementsByClassName("images");
