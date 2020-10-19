@@ -6,13 +6,12 @@
         <script>
                 function picture(){ 
                   var pic = "https://64.media.tumblr.com/82f082a15f99b1adf9f32b9cea88a21d/tumblr_multv3ghtm1rw662jo1_r2_500.gif";
-                  var displayStyle = document.getElementById("sakura").style.display;
-                  if(displayStyle = "none"){
-                    displayStyle = "block";
+                  var displayStyle = document.getElementById("sakura");
+                  if(displayStyle.style.display === "none"){
+                    displayStyle.style.display = "block";
                   } else{
-                    displayStyle = "none";
+                    displayStyle.style.display = "none";
                   }
-                  document.getElementById("sakura").style.display = displayStyle;
                   }
                   function hidepicture() {
                     var x = document.getElementsByClassName("images");
@@ -49,7 +48,7 @@
         <br>
         <img class="images" src="https://64.media.tumblr.com/0fdf0005280c8c54d22147446483f4f2/8a857e24ad224285-07/s1280x1920/2d8e02749540630ac629d09e4bcc16d6192f710e.gif" alt="My nice day">
         <br>
-        <img class="images" id="sakura" src="https://64.media.tumblr.com/82f082a15f99b1adf9f32b9cea88a21d/tumblr_multv3ghtm1rw662jo1_r2_500.gif" style="display:none;">
+        <img class="images" id="sakura" src="https://64.media.tumblr.com/82f082a15f99b1adf9f32b9cea88a21d/tumblr_multv3ghtm1rw662jo1_r2_500.gif" style="none;">
         <buttom class="button button2" onclick="picture()">Show Pic</buttom>
         <br>
         <h1>Look this Image map</h1>
