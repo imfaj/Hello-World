@@ -63,4 +63,12 @@
           <br>
           <h1 id="myHeader">Are you hungry?</h1>
           <button onclick="VamosAComer()">Si!</button><button onclick="PuesyoSiVamosAComer()">No!</button>
+          <br>
+          <p id="demo">Have a Good Night!</p>
+          <br>
+          <script>
+          if (new Date().getHours() < 18) {
+            document.getElementById("demo").innerHTML = "Have a Good day!";
+          }
+          </script>
       </body>
