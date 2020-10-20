@@ -35,6 +35,12 @@
                   function PuesyoSiVamosAComer() {
                     document.getElementById("myHeader").innerHTML = "Aw :c. I'm hungry. Let's talk and eat somewhere!";
                   }
+                  function myCanvas() {
+                    var c = document.getElementById("HelloAnime");
+                    var ctx = c.getContext("2d");
+                    var img = document.getElementById("scream");
+                    ctx.drawImage(img,10,10);
+                    }
           </script>
     </head>
     <header id="header">
@@ -45,7 +51,7 @@
         <br>
         <p><a href="index.html">Return to INDEX.HTML</a></p>
         <br>
-        <h1>Hello <img src="https://storage.googleapis.com/wastickers-mirror.appspot.com/stickers_storage/2020/03/18/file_1773684_128x128.png" alt="Anime Hello" style="float:right;width:42px;height:42px;"></h1>
+        <h1>Hello <img id="HelloAnime"src="https://storage.googleapis.com/wastickers-mirror.appspot.com/stickers_storage/2020/03/18/file_1773684_128x128.png" alt="Anime Hello" style="float:right;width:auto;height:auto;"></h1>
 
         <img class="images" src="https://64.media.tumblr.com/57671c224d8255dc54e36f879a1b07c5/cb42d21796798455-95/s500x750/3e3f51d954ebe42ef85e86cc230161c2bc140c83.jpg" alt="PinkMegane">
         <br>
@@ -67,6 +73,12 @@
           <br>
           <h1 id="myHeader">Are you hungry?</h1>
           <button onclick="VamosAComer()">Si!</button><button onclick="PuesyoSiVamosAComer()">No!</button>
+          <br>
+          <p><button onclick="myCanvas()">Try this.</button></p>
+          <p>Canvas to fill:</p>
+          <canvas id="myCanvas" width="250" height="300"
+          style="border:1px solid #d3d3d3;">
+          Your browser does not support the HTML canvas tag.</canvas>
           <br>
           <p id="demo">Have a Good Night!</p>
           <br>
