@@ -69,7 +69,7 @@
                     margin-left: 15px;
                     float: right;
                     font-style: italic;
-                    background-color: rgb(170, 154, 14);
+                    background-color: #fcf0fb;
                     }
         </style>
         <script>
@@ -85,6 +85,9 @@
                 document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
               }
             }
+            function bgChange(bg) {
+                document.body.style.background = bg;
+                }
             </script>
     </head>
     <!--Only the content inside the <body> section will be displayed in a browser.-->
@@ -97,8 +100,8 @@
             <br>
             <p><a href="#End">Go to the End! :3</a></p>
             <br>
-            <aside style="background-image: url('https://www.pngkit.com/png/full/968-9681963_text-note-paper-overlay-paper.png');">
-                <p>Life's too short to wear boring clothes.<img src="https://img.icons8.com/cotton/2x/like.png" alt="Heart.png" style="display:block; margin-left: auto; margin-right: auto; width:auto;height:auto;"></p>
+            <aside style="background-image: url('https://www.pngkit.com/png/full/968-9681963_text-note-paper-overlay-paper.png'); width:auto;height:auto;">
+                <p style="padding-left: 15px;">Life's too short to wear boring clothes.<img src="https://img.icons8.com/cotton/2x/like.png" alt="Heart.png" style="display:block; margin-left: auto; margin-right: auto; width: 40%;"></p>
             </aside>
             <h1> This is a heading</h1> <!--element defines a large heading-->
 
@@ -214,5 +217,25 @@
             <br>
             <h1 id="End">Ir a index2.html</h1>
             <p><a href="index2.html">INDEX2.HTML</a></p>
-    </body>
+            <br>
+            <h1>Change background color</h1>
+            <p>Mouse over the squares!</p>
+            
+            <table style="width:300px;height:100px">
+            <tr>
+            <td onmouseover="bgChange(this.style.backgroundColor)" 
+            onmouseout="bgChange('transparent')"
+            style="background-color: gray">
+            </td>
+            <td onmouseover="bgChange(this.style.backgroundColor)" 
+            onmouseout="bgChange('transparent')"
+            style="background-color:PaleGreen">
+            </td>
+            <td onmouseover="bgChange(this.style.backgroundColor)" 
+            onmouseout="bgChange('transparent')"
+            style="background-color:skyblue">
+            </td>
+            </tr>
+            </table>
+        </body>
 </html>
