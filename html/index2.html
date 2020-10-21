@@ -36,9 +36,9 @@
                     document.getElementById("myHeader").innerHTML = "Aw :c. I'm hungry. Let's talk and eat somewhere!";
                   }
                   function myCanvas() {
-                    var c = document.getElementById("HelloAnime");
+                    var c = document.getElementById("myCanvas");
                     var ctx = c.getContext("2d");
-                    var img = document.getElementById("scream");
+                    var img = document.getElementById("HelloAnime");
                     ctx.drawImage(img,10,10);
                     }
           </script>
@@ -74,11 +74,11 @@
           <h1 id="myHeader">Are you hungry?</h1>
           <button onclick="VamosAComer()">Si!</button><button onclick="PuesyoSiVamosAComer()">No!</button>
           <br>
-          <p><button onclick="myCanvas()">Try this.</button></p>
+          <p><button onclick="myCanvas()">Draw an image with canvas.</button></p>
           <p>Canvas to fill:</p>
-          <canvas id="myCanvas" width="250" height="300"
+          <canvas id="myCanvas" width="auto" height="auto"
           style="border:1px solid #d3d3d3;">
-          Your browser does not support the HTML canvas tag.</canvas>
+          Your browser does not support the HTML5 canvas tag.</canvas>
           <br>
           <p id="demo">Have a Good Night!</p>
           <br>
