@@ -88,6 +88,12 @@
             function bgChange(bg) {
                 document.body.style.background = bg;
                 }
+                function disable() {
+                    document.getElementById("mySelect").disabled=true;
+                    }
+                function enable() {
+                    document.getElementById("mySelect").disabled=false;
+                    }
             </script>
     </head>
     <!--Only the content inside the <body> section will be displayed in a browser.-->
@@ -100,7 +106,7 @@
             <br>
             <p><a href="#End">Go to the End! :3</a></p>
             <br>
-            <aside style="background-image: url('https://www.pngkit.com/png/full/968-9681963_text-note-paper-overlay-paper.png'); width:auto;height:auto;">
+            <aside style="background-image: url('https://www.pngkit.com/png/full/968-9681963_text-note-paper-overlay-paper.png'); width:30%;height:30%;">
                 <p style="padding-left: 15px;">Life's too short to wear boring clothes.<img src="https://img.icons8.com/cotton/2x/like.png" alt="Heart.png" style="display:block; margin-left: auto; margin-right: auto; width: 40%;"></p>
             </aside>
             <h1> This is a heading</h1> <!--element defines a large heading-->
@@ -221,7 +227,7 @@
             <h1>Change background color</h1>
             <p>Mouse over the squares!</p>
             
-            <table style="width:300px;height:100px">
+            <table style="width:300px;height:100px;text-align:center">
             <tr>
             <td onmouseover="bgChange(this.style.backgroundColor)" 
             onmouseout="bgChange('transparent')"
@@ -237,5 +243,16 @@
             </td>
             </tr>
             </table>
+            <br>
+            <form style="text-align: center;">
+                <select id="mySelect">
+                  <option>bla1</option>
+                  <option>blabla2</option>
+                  <option>blablabla3</option>
+                  </select>
+                <br><br>
+                <input type="button" onclick="disable()" value="Disable list">
+                <input type="button" onclick="enable()" value="Enable list">
+                </form>
         </body>
 </html>
