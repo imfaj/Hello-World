@@ -42,6 +42,12 @@
                     var img = document.getElementById("HelloAnime");
                     ctx.drawImage(img,10,10);
                     }
+                    if (new Date().getHours() < 18) {
+                      document.getElementById("demo").innerHTML = "Have a Good day!";
+                    }
+                    function Formulario() {
+                      document.getElementById("frm1").submit();
+                    }
           </script>
     </head>
     <header id="header">
@@ -83,9 +89,9 @@
           <br>
           <p id="demo">Have a Good Night!</p>
           <br>
-          <script>
-          if (new Date().getHours() < 18) {
-            document.getElementById("demo").innerHTML = "Have a Good day!";
-          }
-          </script>
+          <form id="frm1" action="/action_page.php">
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname"><br><br>
+            <input type="button" onclick="Formulario()" value="Submit">
+          </form>
       </body>
