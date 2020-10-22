@@ -86,18 +86,24 @@
               }
             }
             function bgChange(bg) {
-                document.body.style.background = bg;
-                }
-                function disable() {
-                    document.getElementById("mySelect").disabled=true;
-                    }
-                function enable() {
-                    document.getElementById("mySelect").disabled=false;
-                    }
+            document.body.style.background = bg;
+            }
+            function disable() {
+            document.getElementById("mySelect").disabled=true;
+            }
+            function enable() {
+            document.getElementById("mySelect").disabled=false;
+            }
+            function Reemplazar() {
+                var str = document.getElementById("body").innerHTML; 
+                var txt = str.replace(/MariFer/i,"uwu <3");
+                document.getElementById("body").innerHTML = txt;
+            }
+            
             </script>
     </head>
     <!--Only the content inside the <body> section will be displayed in a browser.-->
-    <body style="background-color:#fcf0fb;text-align:center;font-family:cursive;"> <!--element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.-->
+    <body id="body" style="background-color:#fcf0fb;text-align:center;font-family:cursive;"> <!--element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.-->
             <header id="header-backgroung">
                 <div class="logo"></div>
             </header>
@@ -106,7 +112,7 @@
             <br>
             <p><a href="#End">Go to the End! :3</a></p>
             <br>
-            <aside style="background-image: url('https://www.pngkit.com/png/full/968-9681963_text-note-paper-overlay-paper.png'); width:30%;height:30%;">
+            <aside style="background-image: url('https://www.pngkit.com/png/full/968-9681963_text-note-paper-overlay-paper.png'); width:30%;height:30%; padding-left: 15px; margin-left: 15px;">
                 <p style="padding-left: 15px;">Life's too short to wear boring clothes.<img src="https://img.icons8.com/cotton/2x/like.png" alt="Heart.png" style="display:block; margin-left: auto; margin-right: auto; width: 40%;"></p>
             </aside>
             <h1> This is a heading</h1> <!--element defines a large heading-->
@@ -254,5 +260,8 @@
                 <input type="button" onclick="disable()" value="Disable list">
                 <input type="button" onclick="enable()" value="Enable list">
                 </form>
+                <br>
+                <h1>Replacing Expressions</h1>
+                <button onclick="Reemplazar()">Try it</button>
         </body>
 </html>
