@@ -1,6 +1,12 @@
+---
+id: readme
+title: 
+---
+
 <!--Comment this way-->
 <!--Define titles & subtitles with an amount of #'s-->
 <!-- Title -->
+
 # Hello world
 A newbie's first markdown readme <!--Simple Text-->
 =

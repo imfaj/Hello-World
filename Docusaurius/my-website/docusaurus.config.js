@@ -4,7 +4,7 @@ module.exports = {
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  favicon: 'url('https://static.wikia.nocookie.net/pokeone/images/7/77/Pikachu.png/revision/latest/scale-to-width-down/340?cb=20180916045441')',
+  favicon: 'icon',
   organizationName: 'imfaj', // Usually your GitHub org/user name.
   projectName: 'Hello-World', // Usually your repo name.
   themeConfig: {
@@ -42,6 +42,10 @@ module.exports = {
             {
               label: 'Second Doc',
               to: 'docs/doc2/',
+            },
+            {
+              label: 'READ ME',
+              to: 'docs/README/',
             },
           ],
         },
