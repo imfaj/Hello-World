@@ -1,15 +1,15 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
+  title: 'My First Docusaurus',
+  tagline: 'Learning rawr!',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  favicon: 'url('https://static.wikia.nocookie.net/pokeone/images/7/77/Pikachu.png/revision/latest/scale-to-width-down/340?cb=20180916045441')',
+  organizationName: 'imfaj', // Usually your GitHub org/user name.
+  projectName: 'Hello-World', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'My First Docusaurus',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -18,7 +18,7 @@ module.exports = {
         {
           to: 'docs/',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'My Documents',
           position: 'left',
         },
         {to: 'blog', label: 'Blog', position: 'left'},
