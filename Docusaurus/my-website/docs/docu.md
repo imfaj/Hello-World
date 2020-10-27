@@ -19,4 +19,13 @@ title: WriteTitleHere
 ```
 <br/>
 
-After this, go to the *sidebars.js* file (inside *my-website* folder)
+After this, go to the *sidebars.js* file (inside *my-website* folder) and add the *id* of your new file to add it to the page. <br/>
+
+```
+module.exports = {
+  someSidebar: {
+    Docusaurus: ['doc1', 'doc2', 'doc3','AddIdHere'],
+    Features: ['mdx'],
+  },
+};
+```
