@@ -49,7 +49,7 @@
                       document.getElementById("frm1").submit();
                     }
                     function OnKey(color) {
-                      document.forms[0].myInput.style.background = color;
+                      document.getElementById("frm2").myInput.style.background = color;
                     }
           </script>
     </head>
@@ -97,7 +97,7 @@
             Last name: <input type="text" name="lname"><br><br>
             <input type="button" onclick="Formulario()" value="Submit">
           </form>
-          <form>
+          <form id="frm2">
             Write a message and look the input event (onkeydown vs onkeyup):<br>
             <input 
             type="text" 
