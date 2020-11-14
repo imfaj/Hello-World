@@ -19,6 +19,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Fixes the prev/next links of the sliders
+    $('.carousel-control.left').click(function(e) {
+      e.stopPropagation();
+      $('.js-carousel').carousel('prev');
+      return false;
+    });
+    
+    $('.carousel-control.right').click(function(e) {
+      e.stopPropagation();
+      $('.js-carousel').carousel('next');
+      return false;
+    });
+  </script>
 </head>
 <body>
 
@@ -259,6 +273,14 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+
+  $('a[data-slide="prev"]').click(function() {
+    $('#myCarousel').carousel('prev');
+  });
+  
+  $('a[data-slide="next"]').click(function() {
+    $('#myCarousel').carousel('next');
+  });
 
 </div>
 </body>
