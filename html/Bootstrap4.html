@@ -23,13 +23,13 @@
     // Fixes the prev/next links of the sliders
     $('.carousel-control.left').click(function(e) {
       e.stopPropagation();
-      $('.js-carousel').carousel('prev');
+      $('#myCarousel').carousel('prev');
       return false;
     });
     
     $('.carousel-control.right').click(function(e) {
       e.stopPropagation();
-      $('.js-carousel').carousel('next');
+      $('#myCarousel').carousel('next');
       return false;
     });
   </script>
@@ -238,13 +238,14 @@
   </div>
 </div>
 <br>
-<div id="demo" class="carousel slide" data-ride="carousel">
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
   <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
   </ul>
 
   <!-- The slideshow -->
@@ -265,22 +266,14 @@
   </div>
 
   <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#demo" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-
-  $('a[data-slide="prev"]').click(function() {
-    $('#myCarousel').carousel('prev');
-  });
-  
-  $('a[data-slide="next"]').click(function() {
-    $('#myCarousel').carousel('next');
-  });
 
 </div>
 </body>
