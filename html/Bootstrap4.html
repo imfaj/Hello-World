@@ -2,7 +2,7 @@
 <!---This is Bootstrap 4 CDN. Including Bootstrap 4 from CDN (Content Delivery Network) instead of downloading from getbootstrap.com--->
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Marifer's Firts Bootstrap</title>
   <!--Always include the HTML5 doctype at the beginning of the page, along with the lang attribute and the correct character set:--->
   <meta charset="utf-8">
   <!--To ensure proper rendering and touch zooming, add the following <meta> tag inside the <head> element:-->
@@ -222,6 +222,7 @@
   <div class="col text-center">
   <button type="button" class="btn btn-primary mx-auto" data-toggle="collapse" data-target="#demo">Click Here baby <img src="https://i.pinimg.com/originals/51/d7/f6/51d7f6da072c3a95792ab96acc22febf.png" class="rounded w-25" alt="Pikachu"></button>
   </div>
+  <br>
   <div id="demo" class="collapse justify-content-center">
     <img src="https://i.pinimg.com/originals/58/72/58/58725865c95fe20cfc595725fca0d6a3.gif" class="rounded align mx-auto d-block" alt="Pikachu">
   </div>
@@ -271,5 +272,46 @@
 </div>
 <br>
 
+<div class="container">
+  <h2>Fading Modal</h2>
+  <p>Add the "fade" class to the modal container if you want the modal to fade in on open and fade out on close.</p>
+
+  <!-- Button to Open/trigger the Modal -->
+  <div class="col text-center">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
+    Collapsible inside a modal
+  </button>
+  </div>
+
+  <!-- The Modal -->
+  <div class="modal fade top" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog">
+      <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+      
+        <!-- Content -->
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+           <h4 class="modal-title">Modal Heading</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+        
+          <!-- Modal body -->
+          <div class="modal-body">
+           Modal body..
+          </div>
+        
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<br>
 </body>
 </html>
