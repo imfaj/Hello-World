@@ -22,12 +22,23 @@
   <script src="js/bootstrap.js"></script>
   <!-- Para que el video de youtube dentro del modal se cpause al cerrar el modal--> 
   <script> 
-    window.onYouTubeIframeAPIReady = () => {
-      const player = new YT.Player('ytplayer1')
-      $('#modalYT ').on('hide.bs.modal', () => {
-        player.pauseVideo()
-      })
-    }
+  $(document).ready(function(){
+      /* Get iframe src attribute value i.e. YouTube video url
+      and store it in a variable */
+      var url = $("ytplayer1").attr('src');
+    
+      /* Assign empty url value to the iframe src attribute when
+      modal hide, which stop the video playing */
+      $("modalYT").on('hide.bs.modal', function(){
+          $("ytplayer1").attr('src', '');
+      });
+    
+      /* Assign the initially stored url back to the iframe src
+      attribute when modal is displayed again */
+      $("modalYT").on('show.bs.modal', function(){
+          $("ytplayer1").attr('src', url);
+      });
+  });
     </script>
 </head>
 <body>
