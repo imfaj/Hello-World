@@ -20,6 +20,15 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="js/bootstrap.js"></script>
+  <!-- Para que el video de youtube dentro del modal se cpause al cerrar el modal--> 
+  <script> 
+    window.onYouTubeIframeAPIReady = () => {
+      const player = new YT.Player('ytplayer1')
+      $('#modalYT ').on('hide.bs.modal', () => {
+        player.pauseVideo()
+      })
+    }
+    </script>
 </head>
 <body>
 
@@ -379,14 +388,7 @@
         <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4"
           data-dismiss="modal">Close</button>
 
-          <script>
-          window.onYouTubeIframeAPIReady = () => {
-            const player = new YT.Player('ytplayer1')
-            $('#modalYT ').on('hide.bs.modal', () => {
-              player.pauseVideo()
-            })
-          }
-          </script>
+          <!-- Se hizo un script ubicado arriba para que el video se pause al cerrar el modal-->
 
       </div>
 
