@@ -17,6 +17,25 @@
 
     <!-- Tab's Title-->
     <title>Marifer's First Bootstrap Tab</title>
+
+    <!-- JavaScript-->
+    <!--- Para que el video de youtube dentro del modal se cpause al cerrar el modal---> 
+    <script> 
+      $(document).ready(function(){
+        /* Get iframe src attribute value i.e. YouTube video url and store it in a variable */
+        var url = $("ytplayer1").attr('src');
+        
+        /* Assign empty url value to the iframe src attribute when modal hide, which stop the video playing */
+        $("modalYT").on('hide.bs.modal', function(){
+          $("ytplayer1").attr('src', '');
+        });
+        
+        /* Assign the initially stored url back to the iframe src attribute when modal is displayed again */
+        $("modalYT").on('show.bs.modal', function(){
+          $("ytplayer1").attr('src', url);
+        });
+      });
+    </script>
   </head>
 
 
@@ -428,27 +447,5 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-
-
-        <!--- Para que el video de youtube dentro del modal se cpause al cerrar el modal---> 
-        <script> 
-          $(document).ready(function(){
-              /* Get iframe src attribute value i.e. YouTube video url
-              and store it in a variable */
-              var url = $("ytplayer1").attr('src');
-            
-              /* Assign empty url value to the iframe src attribute when
-              modal hide, which stop the video playing */
-              $("modalYT").on('hide.bs.modal', function(){
-                  $("ytplayer1").attr('src', '');
-              });
-            
-              /* Assign the initially stored url back to the iframe src
-              attribute when modal is displayed again */
-              $("modalYT").on('show.bs.modal', function(){
-                  $("ytplayer1").attr('src', url);
-              });
-          });
-            </script>
   </body>
 </html>
