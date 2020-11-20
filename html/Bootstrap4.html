@@ -21,20 +21,13 @@
     <!-- JavaScript-->
     <!--- Para que el video de youtube dentro del modal se cpause al cerrar el modal---> 
     <script> 
-      $(document).ready(function(){
-        /* Get iframe src attribute value i.e. YouTube video url and store it in a variable */
-        var url = $("ytplayer1").attr('src');
-        
-        /* Assign empty url value to the iframe src attribute when modal hide, which stop the video playing */
-        $("modalYT").on('hide.bs.modal', function(){
-          $("ytplayer1").attr('src', '');
-        });
-        
-        /* Assign the initially stored url back to the iframe src attribute when modal is displayed again */
-        $("modalYT").on('show.bs.modal', function(){
-          $("ytplayer1").attr('src', url);
-        });
-      });
+      window.onYouTubeIframeAPIReady = () => {
+        const player = new YT.Player('ytplayer')
+
+        $('#modalYT').on('hide.bs.modal', () => {
+          player.pauseVideo()
+        })
+      }
     </script>
   </head>
 
@@ -396,7 +389,7 @@
         <div class="modal-body mb-0 p-0">
 
           <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-            <iframe id="ytplayer1" class="embed-responsive-item" src="https://www.youtube.com/embed/UOxkGD8qRB4"
+            <iframe id="ytplayer" class="embed-responsive-item" src="https://www.youtube.com/embed/UOxkGD8qRB4"
               allowfullscreen></iframe> <!-- The url must have "embed"-->
           </div>
 
