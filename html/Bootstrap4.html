@@ -20,14 +20,15 @@
 
     <!-- JavaScript-->
     <!--- Para que el video de youtube dentro del modal se cpause al cerrar el modal---> 
-    <script> 
-      window.onYouTubeIframeAPIReady = () => {
-        const player = new YT.Player('ytplayer')
-
-        $('#modalYT').on('hide.bs.modal', () => {
-          player.pauseVideo()
-        })
-      }
+    <script>
+      $(document).ready(function() {
+        $('#youtubeVideo').on('hidden.bs.modal', function() {
+          var $this = $(this).find('iframe'),
+            tempSrc = $this.attr('src');
+          $this.attr('src', "");
+          $this.attr('src', tempSrc);
+        });
+      });
     </script>
   </head>
 
@@ -380,7 +381,7 @@
     <!--Modal: modalYT-->
     <div class="modal fade" id="modalYT" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
       aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-dialog modal-lg">
 
         <!--Content-->
         <div class="modal-content">
@@ -389,7 +390,7 @@
         <div class="modal-body mb-0 p-0">
 
           <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-            <iframe id="ytplayer" class="embed-responsive-item" src="https://www.youtube.com/embed/UOxkGD8qRB4"
+            <iframe id="ytplayer" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/UOxkGD8qRB4" frameborder="0"
               allowfullscreen></iframe> <!-- The url must have "embed"-->
           </div>
 
