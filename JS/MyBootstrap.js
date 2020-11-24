@@ -11,7 +11,3 @@
         });
       });
     /*</script>*/
-
-    $('#myModalPrev').on('hidden.bs.modal', function () {
-      $('#myModalPrev .modal-body').empty();
-   });
