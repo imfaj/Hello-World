@@ -419,8 +419,8 @@
   <!--Modal: modalYT-->
   </div>
 
-  /*<!-- JavaScript-->*/
-  /* Para que el video de youtube dentro del modal se cpause al cerrar el modal */ 
+  <!-- JavaScript-->
+  <!-- Para que el video de youtube dentro del modal se cpause al cerrar el modal -->
   <script>
     $(document).ready(function(){
       $('#modalYT').on('hidden.bs.modal', function() {
@@ -430,6 +430,11 @@
         $this.attr('src', tempSrc);
       });
     });
+
+    /*Popover script*/
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+      });
   </script>
 
   <br>
@@ -453,13 +458,6 @@
       <h3>Popover Example</h3>
       <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
     </div>
-
-    <script>
-      $(document).ready(function(){
-        $('[data-toggle="popover"]').popover();
-      });
-    </script>
-
 
 
     <!-- Optional JavaScript (In this order)-->
