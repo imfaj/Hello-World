@@ -435,6 +435,23 @@
     $(document).ready(function(){
         $('[data-toggle="popover"]').popover();
       });
+
+      /*Tooltip script*/
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+
+      /*GoodPopover script*/
+      $('#good-wrapper').popover({
+        html: true,
+        content: function () {
+            return $('#popover-content').clone().removeClass('d-none');
+        },
+        selector: '.popover-trigger',
+        placement: "right",
+        container: $("body"),
+        trigger: "click"
+      });
   </script>
 
   <br>
@@ -447,16 +464,19 @@
     <a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a>
     <a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a>
   </div>
-  <script>
-    $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip();   
-    });
-    </script>
 
     <br>
     <div class="container">
       <h3>Popover Example</h3>
       <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+
+      <br>
+
+      <div id="good-wrapper">
+        <button class='popover-trigger btn btn-primary' title='bug example'>
+          works very good
+        </button>
+      </div>
     </div>
 
 
