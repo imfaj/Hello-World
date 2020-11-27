@@ -379,7 +379,7 @@
 
           <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
             <iframe id="ytplayer" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/wXhTHyIgQ_U" frameborder="0"
-              allowfullscreen></iframe> <!-- The url must have "embed"-->
+              allowfullscreen></iframe> <!-- The url must have "embed" y recordar poner JS para que se pause al cerrar-->
           </div>
 
         </div>
@@ -452,17 +452,24 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-      <!-- JavaScript-->
-  <!-- Para que el video de youtube dentro del modal se cpause al cerrar el modal -->
   <script>
-    $(document).ready(function(){
+    /*Para que el video de youtube dentro del modal se cpause al cerrar el modal*/
+    $(function(){
+    $('#modalYT').modal({
+        show: false
+    }).on('hidden.bs.modal', function(){
+        $(this).find('video')[0].pause();
+    });
+});
+
+    /*$(document).ready(function(){
       $('#modalYT').on('hidden.bs.modal', function() {
         var $this = $(this).find('iframe'),
           tempSrc = $this.attr('src');
         $this.attr('src', "");
         $this.attr('src', tempSrc);
       });
-    });
+    });*/
 
     /*Popover script*/
     $(document).ready(function(){
