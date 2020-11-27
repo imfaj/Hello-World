@@ -418,42 +418,6 @@
   </div>
   <!--Modal: modalYT-->
   </div>
-
-  <!-- JavaScript-->
-  <!-- Para que el video de youtube dentro del modal se cpause al cerrar el modal -->
-  <script>
-    $(document).ready(function(){
-      $('#modalYT').on('hidden.bs.modal', function() {
-        var $this = $(this).find('iframe'),
-          tempSrc = $this.attr('src');
-        $this.attr('src', "");
-        $this.attr('src', tempSrc);
-      });
-    });
-
-    /*Popover script*/
-    $(document).ready(function(){
-        $('[data-toggle="popover"]').popover();
-      });
-
-      /*Tooltip script*/
-    $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip();   
-    });
-
-      /*GoodPopover script*/
-      $('#good-wrapper').popover({
-        html: true,
-        content: function () {
-            return $('#popover-content').clone().removeClass('d-none');
-        },
-        selector: '.popover-trigger',
-        placement: "right",
-        container: $("body"),
-        trigger: "click"
-      });
-  </script>
-
   <br>
 
   <div class="container">
@@ -487,6 +451,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <!-- JavaScript-->
+  <!-- Para que el video de youtube dentro del modal se cpause al cerrar el modal -->
+  <script>
+    $(document).ready(function(){
+      $('#modalYT').on('hidden.bs.modal', function() {
+        var $this = $(this).find('iframe'),
+          tempSrc = $this.attr('src');
+        $this.attr('src', "");
+        $this.attr('src', tempSrc);
+      });
+    });
+
+    /*Popover script*/
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+      });
+
+      /*Tooltip script*/
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+
+      /*GoodPopover script*/
+      $('#good-wrapper').popover({
+        html: true,
+        content: function () {
+            return $('#popover-content').clone().removeClass('d-none');
+        },
+        selector: '.popover-trigger',
+        placement: "right",
+        container: $("body"),
+        trigger: "click"
+      });
+  </script>
 
   </body>
 </html>
