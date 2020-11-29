@@ -460,14 +460,14 @@
       $('#modalYT').modal({
         show: false
       }).on('hidden.bs.modal', function(){
-        $(this).find('video')[0].pause();
+        $(this).find('iframe')[0].pause();
       });
     });
 
     /*Popover script*/
     $(document).ready(function(){
         $('[data-toggle="popover"]').popover();
-      });
+    });
 
       /*Tooltip script*/
     $(document).ready(function(){
