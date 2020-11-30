@@ -466,14 +466,13 @@
     });*/
     $('#modalYT').on('hidden.bs.modal', function () {
         callPlayer('yt-player', 'stopVideo');
-    
-    var player;
-            function onYouTubePlayerAPIReady() {player = new YT.Player('player');}
+        var player;
+        function onYouTubePlayerAPIReady() {player = new YT.Player('player');}
             //so on jquery event or whatever call the play or stop on the video.
             //to play player.playVideo();
             /*to stop */
             player.stopVideo();
-          });
+    });
 
     /*Popover script*/
     $(document).ready(function(){
