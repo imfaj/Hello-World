@@ -464,8 +464,8 @@
         $(this).find('iframe')[0].pause();
       });
     });*/
-    $('#myModal').on('hidden.bs.modal', function () {
-        /*callPlayer('yt-player', 'stopVideo');*/
+    $('#modalYT').on('hidden.bs.modal', function () {
+        callPlayer('yt-player', 'stopVideo');
     
     var player;
             function onYouTubePlayerAPIReady() {player = new YT.Player('player');}
