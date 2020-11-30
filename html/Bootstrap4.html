@@ -378,7 +378,7 @@
         <div class="modal-body mb-0 p-0">
 
           <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-            <iframe id="ytplayer" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/wXhTHyIgQ_U" frameborder="0"
+            <iframe id="player" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/wXhTHyIgQ_U" frameborder="0"
               allowfullscreen></iframe> <!-- The url must have "embed" y recordar poner JS para que se pause al cerrar-->
           </div>
 
@@ -451,18 +451,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
 
 
     <!-- Estos scripts deben ser llamados despues de llamar las librerias-->
   <script>
     /*Para que el video de youtube dentro del modal se pause al cerrar el modal*/
-    $(function(){
+    /*$(function(){
       $('#modalYT').modal({
         show: false
       }).on('hidden.bs.modal', function(){
         $(this).find('iframe')[0].pause();
       });
-    });
+    });*/
+    $('#myModal').on('hidden.bs.modal', function () {
+        /*callPlayer('yt-player', 'stopVideo');*/
+    
+    var player;
+            function onYouTubePlayerAPIReady() {player = new YT.Player('player');}
+            //so on jquery event or whatever call the play or stop on the video.
+            //to play player.playVideo();
+            /*to stop */
+            player.stopVideo();
+          });
 
     /*Popover script*/
     $(document).ready(function(){
