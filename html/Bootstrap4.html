@@ -461,12 +461,8 @@
     <!-- Estos scripts deben ser llamados despues de llamar las librerias-->
   <script>
     /*Para que el video de youtube dentro del modal se pause al cerrar el modal*/
-    $(function(){
-      $('#modalYT').modal({
-        show: false
-      }).on('hidden.bs.modal', function(){
-        $(this).find('iframe')[0].pause();
-      });
+    $("#modalYT").on('hidden.bs.modal', function (e) {
+      $("#modalYT iframe").attr("src", $("#modalYT iframe").attr("src"));
     });
 
     /*Popover script*/
