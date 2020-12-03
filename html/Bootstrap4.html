@@ -433,14 +433,18 @@
     <div class="container">
       
       <h3>Popover Example</h3>
-      <a href="#" class="popover-trigger" title="Popover Header" data-content="Some content inside the popover. ">Toggle popover</a>
-
-      <br>
-
       <div id="good-wrapper">
         <button class='popover-trigger btn btn-primary' title='bug example'>
           works very good
         </button>
+
+        <br>
+
+        <a href="#" title="Header" data-toggle="popover" data-placement="top" data-content="Content">Top</a>
+        <a href="#" title="Header" data-toggle="popover" data-placement="bottom" data-content="Content">Bottom</a>
+        <a href="#" title="Header" data-toggle="popover" data-placement="left" data-content="Content">Left</a>
+        <a href="#" title="Header" data-toggle="popover" data-placement="right" data-content="Content">Right</a>
+
       </div>
     </div>
 
@@ -477,10 +481,10 @@
 
     /*Popover script*/
     $(document).ready(function(){
-        $('[data-toggle="popover"]').popover();
+      $('[data-toggle="popover"]').popover();   
     });
 
-      /*Tooltip script*/
+     /*Tooltip script*/
     $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip();   
     });
