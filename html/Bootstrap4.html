@@ -14,6 +14,9 @@
     <!-- Bootstrap CDN provides for free-->
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- CSS para los iconos de Redes Sociales "Font Awesome Icons"-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Tab's Title-->
     <title>Marifer's First Bootstrap Tab</title>
@@ -508,12 +511,19 @@
 
     <!-- INICIA CARRUSEL DE TEAMCARDS-->
     <div class="container-fluid">
-      <div class="container">
+      <div class="container  text-center">
         <h2> Team Cards in a Carousel</h2> <br>
       </div>
       <div class="row">
         <div class="col-sm-12">
           <div id="TeamCarru" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#TeamCarru" data-slide-to="0" class="active" style="background-color: gray;"></li>
+              <li data-target="#TeamCarru" data-slide-to="1" style="background-color: gray;"></li>
+            </ul>
+
+            <!-- CARDS SLIDESHOW-->
             <div class="carousel-inner">
               <div class="carousel-item active">
                  <div class="container">
@@ -523,13 +533,13 @@
                          <!-- BEGIN CARD #1 DATA-->
                           <img src="http://www.webcoderskull.com/img/team4.png " class="card-img-top rounded-circle mx-auto d-block" alt="">
                           <div class="card-body">
-                          <h3 class="card-title"><a href="">A.B.C.</a></h3>
-                          <p class="card-text">Web Developer</p>
-                          <ul class="follow-us clearfix">
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                          </ul>
+                          <h3 class="card-title text-center"><a href="">A.B.C. 1</a></h3>
+                          <p class="card-text text-center">Web Developer</p>
+                          <div class="col text-center">
+                            <a href="#"><i class="fa fa-facebook" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                            <a href="#"><i class="fa fa-twitter" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                            <a href="#"><i class="fa fa-linkedin" style="font-size:36px" aria-hidden="true"></i></a>
+                          </div>
                           <!-- END CARD #1 DATA-->
                         </div>
 
@@ -538,11 +548,18 @@
                      </div>
                      <div class="col-sm-12 col-lg-4">
                        <div class="card" style="width: 300px; margin: auto;">
-                         <img src="images/b.jpg" class="card-img-top">
-                         <div class="card-body">
-                           <h4 class="card-title">Why you should use skin masks ?</h4>
-                           <p class="card-text">Skin masks help us to make are skin fresh and also they protect our skin from the harm rays of sun</p>
-                           <button type="button" class="btn btn-warning">Read More</button>
+
+                          <!-- BEGIN CARD #2 DATA-->
+                          <img src="http://www.webcoderskull.com/img/team4.png " class="card-img-top rounded-circle mx-auto d-block" alt="">
+                          <div class="card-body">
+                          <h3 class="card-title text-center"><a href="">A.B.C. 2</a></h3>
+                          <p class="card-text text-center">Web Developer</p>
+                          <div class="col text-center">
+                            <a href="#"><i class="fa fa-facebook" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                            <a href="#"><i class="fa fa-twitter" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                            <a href="#"><i class="fa fa-linkedin" style="font-size:36px" aria-hidden="true"></i></a>
+                          </div>
+                          <!-- END CARD #2 DATA-->
                            
                          </div>
                          
@@ -551,11 +568,18 @@
                      </div>
                      <div class="col-sm-12 col-lg-4">
                        <div class="card" style="width: 300px; margin: auto;">
-                         <img src="images/c.jpg" class="card-img-top">
+
+                         <!-- BEGIN CARD #3 DATA-->
+                         <img src="http://www.webcoderskull.com/img/team4.png " class="card-img-top rounded-circle mx-auto d-block" alt="">
                          <div class="card-body">
-                           <h4 class="card-title">Why you should use skin masks ?</h4>
-                           <p class="card-text">Skin masks help us to make are skin fresh and also they protect our skin from the harm rays of sun</p>
-                           <button type="button" class="btn btn-warning">Read More</button>
+                         <h3 class="card-title text-center"><a href="">A.B.C. 3</a></h3>
+                         <p class="card-text text-center">Web Developer</p>
+                         <div class="col text-center">
+                           <a href="#"><i class="fa fa-facebook" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                           <a href="#"><i class="fa fa-twitter" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                           <a href="#"><i class="fa fa-linkedin" style="font-size:36px" aria-hidden="true"></i></a>
+                         </div>
+                         <!-- END CARD #3 DATA-->
                            
                          </div>
                          
@@ -574,11 +598,18 @@
                    <div class="row">
                      <div class="col-sm-12 col-lg-4">
                        <div class="card" style="width: 300px;margin: auto;">
-                         <img src="images/d.jpg" class="card-img-top">
+
+                         <!-- BEGIN CARD #4 DATA-->
+                         <img src="http://www.webcoderskull.com/img/team4.png " class="card-img-top rounded-circle mx-auto d-block" alt="">
                          <div class="card-body">
-                           <h4 class="card-title">Why you should use skin masks ?</h4>
-                           <p class="card-text">Skin masks help us to make are skin fresh and also they protect our skin from the harm rays of sun</p>
-                           <button type="button" class="btn btn-warning">Read More</button>
+                         <h3 class="card-title text-center"><a href="">A.B.C. 4</a></h3>
+                         <p class="card-text text-center">Web Developer</p>
+                         <div class="col text-center">
+                           <a href="#"><i class="fa fa-facebook" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                           <a href="#"><i class="fa fa-twitter" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                           <a href="#"><i class="fa fa-linkedin" style="font-size:36px" aria-hidden="true"></i></a>
+                         </div>
+                         <!-- END CARD #4 DATA-->
                            
                          </div>
                          
@@ -587,11 +618,18 @@
                      </div>
                      <div class="col-sm-12 col-lg-4">
                        <div class="card" style="width: 300px; margin: auto;">
-                         <img src="images/e.jpg" class="card-img-top">
+
+                         <!-- BEGIN CARD #5 DATA-->
+                         <img src="http://www.webcoderskull.com/img/team4.png " class="card-img-top rounded-circle mx-auto d-block" alt="">
                          <div class="card-body">
-                           <h4 class="card-title">Why you should use skin masks ?</h4>
-                           <p class="card-text">Skin masks help us to make are skin fresh and also they protect our skin from the harm rays of sun</p>
-                           <button type="button" class="btn btn-warning">Read More</button>
+                         <h3 class="card-title text-center"><a href="">A.B.C. 5</a></h3>
+                         <p class="card-text text-center">Web Developer</p>
+                         <div class="col text-center">
+                           <a href="#"><i class="fa fa-facebook" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                           <a href="#"><i class="fa fa-twitter" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                           <a href="#"><i class="fa fa-linkedin" style="font-size:36px" aria-hidden="true"></i></a>
+                         </div>
+                         <!-- END CARD #5 DATA-->
                            
                          </div>
                          
@@ -600,11 +638,18 @@
                      </div>
                      <div class="col-sm-12 col-lg-4">
                        <div class="card" style="width: 300px; margin: auto;">
-                         <img src="images/f.jpg" class="card-img-top">
+
+                         <!-- BEGIN CARD #6 DATA-->
+                         <img src="http://www.webcoderskull.com/img/team4.png " class="card-img-top rounded-circle mx-auto d-block" alt="">
                          <div class="card-body">
-                           <h4 class="card-title">Why you should use skin masks ?</h4>
-                           <p class="card-text">Skin masks help us to make are skin fresh and also they protect our skin from the harm rays of sun</p>
-                           <button type="button" class="btn btn-warning">Read More</button>
+                         <h3 class="card-title text-center"><a href="">A.B.C. 6</a></h3>
+                         <p class="card-text text-center">Web Developer</p>
+                         <div class="col text-center">
+                           <a href="#"><i class="fa fa-facebook" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                           <a href="#"><i class="fa fa-twitter" style="font-size:36px" aria-hidden="true"></i></a> &nbsp;
+                           <a href="#"><i class="fa fa-linkedin" style="font-size:36px" aria-hidden="true"></i></a>
+                         </div>
+                         <!-- END CARD #6 DATA-->
                            
                          </div>
                          
@@ -620,10 +665,10 @@
               </div>
               
             </div>
-            <a href="#TeamCarru" class="carousel-control-prev" data-slide="prev">
+            <a href="#TeamCarru" class="carousel-control-prev" data-slide="prev" style="background-color: gray;">
               <span class="carousel-control-prev-icon"></span>
             </a>
-            <a href="#TeamCarru" class="carousel-control-next" data-slide="next">
+            <a href="#TeamCarru" class="carousel-control-next" data-slide="next" style="background-color: gray;">
               <span class="carousel-control-next-icon"></span>
             </a>
             
